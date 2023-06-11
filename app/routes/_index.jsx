@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, Link, useLoaderData } from "@remix-run/react";
 
 export const meta = () => {
   return [
@@ -20,6 +20,7 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Adding Authentication to your Web App</h1>
+      <Link to='/auth/login'>Go to Login Page</Link>
       <div>
         <ul>
           {pokemons.map(pokemon => {
